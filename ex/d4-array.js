@@ -33,5 +33,20 @@ console.log(nums1[nums1.length-1]);//best way 直接取最後一個元素
 
 //合計總和
 let scores = [60, 70, 80, 90, 100];
+let sum = 0;
 // 用 for loop 或 forEach 計算總分，印出總和
-for(let i = 0 ; i <= scores.length ; i++){
+for(let i = 0 ; i < scores.length ; i++){
+    sum = sum + scores[i];
+}
+console.log(sum);
+
+//找最大值！
+let ages = [15, 22, 36, 41, 28];
+// 請找出最大嘅數字
+let max = 0;
+for(let i = 0 ; i < ages.length;i++){
+    if(ages[i]>max){
+        max = ages[i];
+    }
+}
+console.log(max);
