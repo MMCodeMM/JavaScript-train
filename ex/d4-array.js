@@ -25,3 +25,13 @@ fruits.forEach(function(fruits){
 fruits.forEach(function(fruits , index){
     console.log("第" + (index + 1 ) + "個水果" + ":" + fruits);
 })
+
+//找最尾元素
+let nums1 = [3,7,11,25,42];
+//console.log(nums1[4]);
+console.log(nums1[nums1.length-1]);//best way 直接取最後一個元素
+
+//合計總和
+let scores = [60, 70, 80, 90, 100];
+// 用 for loop 或 forEach 計算總分，印出總和
+for(let i = 0 ; i <= scores.length ; i++){
