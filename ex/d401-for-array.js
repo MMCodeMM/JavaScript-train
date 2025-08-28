@@ -14,16 +14,17 @@ for(let i = 0 ; i < prices.length;i++){
 }
 console.log(min);
 console.log(max);
+
 //計平均分
 let scores = [80, 75, 90, 60, 100];
 // 請計算所有分數嘅平均值
 let sum = 0;
 for( let i = 0 ; i < scores.length ; i++){
     sum = sum + scores[i];
-    let average = sum / scores.length;
-
 }
+    let average = sum / scores.length;
 console.log(average);
+
 
 //過濾偶數
 let numbers = [12, 7, 19, 24, 36, 41];
