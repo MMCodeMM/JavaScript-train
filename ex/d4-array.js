@@ -50,3 +50,14 @@ for(let i = 0 ; i < ages.length;i++){
     }
 }
 console.log(max);
+
+//找最小值
+let prices = [99, 45, 120, 60, 10];
+// 請用 for loop 搵出最細嘅數字
+let min = 0 ;
+for(let i = 0 ; i < prices.length;i++){
+    if(prices[i] > (min < prices[i])){
+        min = prices[i];
+    }
+}
+console.log(min);
