@@ -89,7 +89,7 @@ console.log(findMin([5, 9, 2, 11, 7])); // 2
 
 //計平均數
 function average(arr){
-    let sum = arr[0];
+    let sum = 0;
     for(let i = 0;i < arr.length;i++){
         sum = sum + arr[i];
     }
@@ -99,3 +99,43 @@ function average(arr){
 
 
 console.log(average([80, 75, 90, 60, 100])); // 81
+
+//計及格人數
+//寫一個 function countPass(arr)，計算陣列分數中大於等於 60 嘅人數。
+function countPass(arr){
+    let count = 0;
+    for(let i = 0 ; i < arr.length ;i++){
+        let score = arr[i];
+        if(score >= 60){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countPass([80, 75, 90, 60, 100, 50])); // 5
+
+//合格名單
+//寫一個 function getPassList(arr)，輸出所有分數大於等於 60 嘅人名。
+//（假設你有一個陣列存學生資料）
+
+let students = [
+  {name: "Max", score: 80},
+  {name: "Tom", score: 50},
+  {name: "Alice", score: 90}
+];
+
+function getPassList(students){
+    let passList = [];
+    for(let i = 0 ; i <students.length ; i ++){
+        let student = students[i];
+        if(student.score >= 60){
+            passList.push(student.name);
+        }
+    }
+    return passList;
+}
+
+console.log(getPassList(students));
+// ["Max", "Alice"]
+
