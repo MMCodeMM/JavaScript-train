@@ -139,3 +139,90 @@ function getPassList(students){
 console.log(getPassList(students));
 // ["Max", "Alice"]
 
+
+//題目 1：找最小值（Array）
+
+//寫一個 function findMin(arr)，回傳陣列中最細嘅數字。
+
+function findMin(arr){
+        let min = arr[0];
+
+    for(let i = 0 ; i < arr.length ; i ++){
+        if( arr[i]<min){
+            min = arr[i];
+        }
+    }
+    return min
+}
+
+
+console.log(findMin([9, 3, 7, 2, 8])); // 2
+
+//題目 2：平均分（Array）
+
+//寫一個 function average(arr)，計算分數平均值。
+
+function average(arr){
+    let sum = 0;
+    for(let i = 0 ; i < arr.length ; i++){
+        sum = sum + arr[i];
+    }
+    let average = sum / arr.length;
+    return average;
+}
+console.log(average([80, 75, 90, 60, 100])); // 81
+
+//題目 3：過濾偶數（Array）
+//寫一個 function filterEven(arr)，回傳陣列中所有偶數組成嘅新陣列。
+function filterEven(arr){
+    let even = [];
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] %2 === 0 ){
+            even.push(arr[i]);
+        }
+
+    }
+    return even ;
+}
+
+function filterOdd(arr){
+    let odd = [];
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] %2 !== 0){
+            odd.push(arr[i]);
+        }
+    }
+    return odd;
+}
+console.log(filterEven([1,2,3,4,5,6,7,8])); // [2,4,6,8]
+console.log(filterOdd([1,2,3,4,5,6,7,8])); // [2,4,6,8]
+
+//題目 4：合格人名單（Array of Objects）
+
+//寫一個 function getPassNames(students)，回傳所有分數 ≥ 60 嘅學生名字。
+let students = [
+  {name: "Max", score: 80},
+  {name: "Tom", score: 50},
+  {name: "Alice", score: 90}
+];
+
+function getPassNames(students){
+    let passList = [];
+    for(let i = 0 ; i < students.length;i++){
+        if(students[i].score >= 60){
+            passList.push(students[i].name);
+        }
+    }
+    return passList;
+}
+function getNotPassNames(arr){
+    let notPassList = [];
+    for(let i = 0 ; i < arr.length;i++){
+        if(arr[i].score < 60){
+            notPassList.push(arr[i].name);
+        }
+    }
+    return notPassList;
+}
+console.log(getPassNames(students)); // ["Max", "Alice"]
+console.log(getNotPassNames(students)); // ["Tom"]
