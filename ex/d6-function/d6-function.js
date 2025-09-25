@@ -119,7 +119,7 @@ console.log(countPass([80, 75, 90, 60, 100, 50])); // 5
 //寫一個 function getPassList(arr)，輸出所有分數大於等於 60 嘅人名。
 //（假設你有一個陣列存學生資料）
 
-let students = [
+let students1 = [
   {name: "Max", score: 80},
   {name: "Tom", score: 50},
   {name: "Alice", score: 90}
