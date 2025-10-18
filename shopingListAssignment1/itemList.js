@@ -10,3 +10,10 @@ let items = [
     {name : 'pen',price: 77},
 
 ]
+
+items.forEach(item =>{
+    console.log(`${item.name} : $${item.price}`);
+});
+
+let total = items.reduce((sum, item) => sum + item.price, 0);
+console.log('總價:', total);
