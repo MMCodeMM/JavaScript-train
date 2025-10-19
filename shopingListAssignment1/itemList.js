@@ -17,3 +17,7 @@ items.forEach(item =>{
 
 let total = items.reduce((sum, item) => sum + item.price, 0);
 console.log('總價:', total);
+
+let averagePrice = total / items.length;
+
+console.log('Average Price' +''+'is :' + averagePrice);
