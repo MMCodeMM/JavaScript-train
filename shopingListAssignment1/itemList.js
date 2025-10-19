@@ -21,3 +21,9 @@ console.log('總價:', total);
 let averagePrice = total / items.length;
 
 console.log('Average Price' +''+'is :' + averagePrice);
+
+function statisticLowPrice(arr){
+    for(let i = 0 ; i >arr.length;i++){
+        
+    }
+}
