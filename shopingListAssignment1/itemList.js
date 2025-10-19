@@ -23,7 +23,14 @@ let averagePrice = total / items.length;
 console.log('Average Price' +''+'is :' + averagePrice);
 
 function statisticLowPrice(arr){
-    for(let i = 0 ; i >arr.length;i++){
-        
+    let count = 0 ;
+
+    for(let i = 0 ; i <arr.length;i++){
+        let items = arr[i];
+        if (items.price<50){
+            count++;
+        }
     }
+    return count;
 }
+console.log(statisticLowPrice(items));
