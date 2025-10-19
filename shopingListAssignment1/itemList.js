@@ -24,13 +24,33 @@ console.log('Average Price' +''+'is :' + averagePrice);
 
 function statisticLowPrice(arr){
     let count = 0 ;
-
+    let lowPriceItem = [];
     for(let i = 0 ; i <arr.length;i++){
         let item = arr[i];
         if (item.price<50){
             count++;
+            lowPriceItem.push(item.name);
         }
     }
-    return count;
+    return {count,lowPriceItem};
+    
 }
-console.log(statisticLowPrice(items));
+let result = statisticLowPrice(items);
+console.log(`有 ${result.count}+ 商品低於50 : + ${result.lowPriceItem.join(', ')}` );
+
+function statisticHigherPrice(arr){
+    let count = 0 ;
+    let highPriceItem = [];
+    for(let i = 0 ; i <arr.length;i++){
+        let item = arr[i];
+        if (item.price>50){
+            count++;
+            highPriceItem.push(item.name);
+        }
+    }
+    return {count,highPriceItem};
+    
+}
+let highPriceItemResult = statisticHigherPrice(items);
+console.log(`有 ${highPriceItemResult.count}+ 商品高於50 : + ${highPriceItemResult.highPriceItem.join(', ')}` );
+
