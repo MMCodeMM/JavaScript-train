@@ -26,8 +26,8 @@ function statisticLowPrice(arr){
     let count = 0 ;
 
     for(let i = 0 ; i <arr.length;i++){
-        let items = arr[i];
-        if (items.price<50){
+        let item = arr[i];
+        if (item.price<50){
             count++;
         }
     }
