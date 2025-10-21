@@ -15,4 +15,8 @@ let passedStudents = students.filter(student =>{
     return student.score >= 60;
 
 });
-console.log(`${students.name} :` + passedStudents);
+
+let passNames = passedStudents.map(student => student.name);
+let passScore = passedStudents.map(student => student.score);
+
+console.log("Passed students" + " " +  passNames.join(',') + " " + passScore.join(":") );
