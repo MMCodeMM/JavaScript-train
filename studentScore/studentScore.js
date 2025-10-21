@@ -5,3 +5,9 @@ let students = [
   { name: 'David', score: 66 },
   { name: 'Eva', score: 45 }
 ];
+
+
+students.forEach(student =>{
+    console.log(`${student.name} : ${student.score}`)
+});
+
