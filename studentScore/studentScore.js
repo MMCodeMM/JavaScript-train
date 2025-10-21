@@ -11,3 +11,8 @@ students.forEach(student =>{
     console.log(`${student.name} : ${student.score}`)
 });
 
+let passedStudents = students.filter(student =>{
+    return student.score >= 60;
+
+});
+console.log(`${students.name} :` + passedStudents);
