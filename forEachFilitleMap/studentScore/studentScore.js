@@ -20,3 +20,10 @@ let passNames = passedStudents.map(student => student.name);
 let passScore = passedStudents.map(student => student.score);
 
 console.log("Passed students" + " " +  passNames.join(',') + " " + passScore.join(":") );
+
+function formatPassedStudents(arr) {
+    // 用 map() 將每個 student 轉換成 "name - score"
+    return arr.map(student => `${student.name} - ${student.score}`);
+}
+
+console.log(formatPassedStudents(passedStudents));
