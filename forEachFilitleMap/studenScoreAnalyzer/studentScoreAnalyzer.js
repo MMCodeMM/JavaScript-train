@@ -5,3 +5,21 @@ let students = [
   { name: 'David', score: 66 },
   { name: 'Eva', score: 45 }
 ];
+
+students.forEach(student => {
+    console.log(`${student.name} - ${student.score}`);
+});
+
+let passedStudents = students.filter(student =>{
+    return student.score >= 60;
+});
+let passNames = passedStudents.map(student => student.name )
+console.log("及格學生 : " + passNames.join(","));
+
+let notPassedStudents = students.filter(student =>{
+    return student.score < 60;
+});
+
+let notPassNames = notPassedStudents.map(student => student.name);
+console.log("不及合格學生 : " + notPassNames.join(",") );
+
