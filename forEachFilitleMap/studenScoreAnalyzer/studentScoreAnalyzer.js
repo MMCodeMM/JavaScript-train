@@ -30,3 +30,7 @@ let totalScore = students.reduce((sum,student)=>{
 averageScore = totalScore / students.length;
 console.log("平均分：" + averageScore);
 
+let topScore = students.reduce((max, student) => {
+    return student.score > max.score ? student : max;
+});
+console.log("最高分學生：" + topScore.name + " - " + topScore.score);
