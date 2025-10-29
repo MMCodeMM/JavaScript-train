@@ -25,7 +25,7 @@ console.log("不及合格學生 : " + notPassNames.join(",") );
 
 let totalScore = students.reduce((sum,student)=>{
     return sum + student.score;
-})
+},0)
 
 averageScore = totalScore / students.length;
 console.log("平均分：" + averageScore);
