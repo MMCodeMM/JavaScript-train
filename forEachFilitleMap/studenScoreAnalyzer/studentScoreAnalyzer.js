@@ -34,3 +34,10 @@ let topScore = students.reduce((max, student) => {
     return student.score > max.score ? student : max;
 });
 console.log("最高分學生：" + topScore.name + " - " + topScore.score);
+
+let notPassTotalScore = notPassedStudents.reduce((sum, student) =>{
+    return sum + student.score;
+},0);
+
+notPassAverageScore = notPassTotalScore / notPassedStudents.length;
+console.log('不合格平均分 : ' + notPassAverageScore);
