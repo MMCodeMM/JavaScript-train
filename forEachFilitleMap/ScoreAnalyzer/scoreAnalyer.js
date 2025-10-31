@@ -18,10 +18,10 @@ function analyzeScores(arr) {
   // 👉 TODO: 用 forEach 或 filter 來分類
     students.forEach(student =>{
         if(student.score >= 60){
-            passedStudents ++;
+            passedStudents.push(student);
         }
         else{
-            notPassedStudents ++;
+            notPassedStudents.push(student);
         }
     });
   // （B）計算平均分
