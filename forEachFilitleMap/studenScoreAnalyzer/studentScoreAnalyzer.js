@@ -41,3 +41,10 @@ let notPassTotalScore = notPassedStudents.reduce((sum, student) =>{
 
 notPassAverageScore = notPassTotalScore / notPassedStudents.length;
 console.log('不合格平均分 : ' + notPassAverageScore);
+
+let passedTotalScore= passedStudents.reduce((sum,student)=>{
+    return sum + student.score;
+},0);
+
+passedAverageScore = passedTotalScore/passedStudents.length;
+console.log('合格平均分 :' + passedAverageScore);
