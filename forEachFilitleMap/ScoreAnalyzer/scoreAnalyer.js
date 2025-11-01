@@ -28,19 +28,32 @@ function analyzeScores(arr) {
   let averageScore = 0;
 
   // 👉 TODO: 用 reduce 計算
+let totalScore = students.reduce((sum,student)=>{
+  return sum + student.score;
+},0);
 
+averageScore = totalScore/students.length;
   // （C）找出最高分、最低分
   let highestStudent = null;
   let lowestStudent = null;
 
   // 👉 TODO: 用 reduce 或 sort 找出
+let topScore = students.reduce((max,student)=>{
+  return student.score > max.score ? student:max;
+},students[0]);
 
+highestStudent = topScore.score;
+
+let lowScore = students.reduce((min,student)=>{
+  return student.score < min.score ? student:min;
+},students[0]);
+lowestStudent = lowScore.score;
   // （D）輸出報告
   console.log("📊 成績報告");
   console.log("--------------------");
-  console.log("平均分：");
-  console.log("最高分：");
-  console.log("最低分：");
+  console.log("平均分：" + averageScore);
+  console.log("最高分：" + highestStudent);
+  console.log("最低分：" + lowestStudent);
   console.log("合格人數：");
   console.log("不合格人數：");
 }
