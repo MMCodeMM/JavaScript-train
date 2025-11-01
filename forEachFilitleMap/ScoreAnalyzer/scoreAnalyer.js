@@ -36,7 +36,8 @@ averageScore = totalScore/students.length;
   // （C）找出最高分、最低分
   let highestStudent = null;
   let lowestStudent = null;
-
+  let passedCount = 0;
+  let notPassedCount = 0;
   // 👉 TODO: 用 reduce 或 sort 找出
 let topScore = students.reduce((max,student)=>{
   return student.score > max.score ? student:max;
@@ -48,14 +49,24 @@ let lowScore = students.reduce((min,student)=>{
   return student.score < min.score ? student:min;
 },students[0]);
 lowestStudent = lowScore.score;
+
+students.forEach(student =>{
+  if (student.score >=60){
+    passedCount ++;
+  }
+  else{
+    notPassedCount++;
+  }
+})
+
   // （D）輸出報告
   console.log("📊 成績報告");
   console.log("--------------------");
   console.log("平均分：" + averageScore);
   console.log("最高分：" + highestStudent);
   console.log("最低分：" + lowestStudent);
-  console.log("合格人數：");
-  console.log("不合格人數：");
+  console.log("合格人數：" + passedCount );
+  console.log("不合格人數：" + notPassedCount);
 }
 
 // 3️⃣ 執行主程式
