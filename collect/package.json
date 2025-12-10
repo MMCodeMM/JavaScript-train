@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "image-dataset": "^1.12.2-cpu",
+    "typescript": "^5.9.3"
+  }
 }
